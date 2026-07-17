@@ -14,7 +14,8 @@ public class CorsConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**") // Apply to all endpoints
-                        .allowedOrigins("http://localhost:5173") // Allow your React app
+
+                        .allowedOrigins("http://localhost:5173", "https://algo-sandbox-frontend.vercel.app") // Allow your React app
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS") // Allow all standard web requests, including the hidden preflight
                         .allowedHeaders("*"); // Allow all headers
             }
